@@ -41,12 +41,12 @@ function addEmployee() {
           //A-z or a-z
           var letters = /^[0-9]+$/;
           //validate type (number)
-          console.log(useLetter.length);
+          //   console.log(useLetter.length);
           if (useLetter.match(letters)) {
             //validate range
 
             if (useLetter.length < 6) {
-              console.log("\nhas to be 5 digits");
+              console.log("\nhas to be more than 5 digits");
               return false;
             } else {
               return true;
@@ -97,7 +97,7 @@ function addEmployee() {
 
 // MANAGER FUNCTION
 function manager(name, id, email, role) {
-  console.log("inside manager fx" + name + email + role);
+  console.log("inside manager fx " + name + " " + email + " " + role);
 
   inquirer
     .prompt([
@@ -139,7 +139,7 @@ function manager(name, id, email, role) {
           } else {
             //generate the template
             const html = render(employeeArray);
-            fs.writeFile(outputPatch, html, function (err) {
+            fs.writeFile(outputPath, html, function (err) {
               if (err) {
                 return console.log(err);
               }
@@ -153,7 +153,7 @@ function manager(name, id, email, role) {
 
 // ENGINEER FUNCTION
 function engineer(name, id, email, role) {
-  console.log("inside engineer fx" + name + email + role);
+  console.log("inside engineer fx " + name + " " + email + " " + role);
 
   inquirer
     .prompt([
@@ -199,7 +199,7 @@ function engineer(name, id, email, role) {
 
 // INTERN FUNCTION
 function intern(name, id, email, role) {
-  console.log("inside intern fx" + name + email + role);
+  console.log("inside intern fx " + name + " " + email + " " + role);
   inquirer
     .prompt([
       {
