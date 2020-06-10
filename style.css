@@ -1,0 +1,11 @@
+.jumbotron {
+  font-family: "Bungee Inline", cursive;
+  text-align: center;
+  background-image: url(./Assets/superheros.jpg);
+  background-repeat: no-repeat;
+  background-size: 400px 250px;
+}
+
+#dream-team {
+  height: 250px;
+}
